@@ -37,12 +37,12 @@ MainWindow::MainWindow(QWidget *parent)
 //    centralWidget()->setMouseTracking(true);
 
     // 添加菜单
-    QMenu *gameMenu = menuBar()->addMenu(tr("Game")); // menuBar默认是存在的，直接加菜单就可以了
-    QAction *actionPVP = new QAction("Person VS Person", this);
+    QMenu *gameMenu = menuBar()->addMenu(tr("游戏模式")); // menuBar默认是存在的，直接加菜单就可以了
+    QAction *actionPVP = new QAction("人人大战", this);
     connect(actionPVP, SIGNAL(triggered()), this, SLOT(initPVPGame()));
     gameMenu->addAction(actionPVP);
 
-    QAction *actionPVE = new QAction("Person VS Computer", this);
+    QAction *actionPVE = new QAction("人机对战", this);
     connect(actionPVE, SIGNAL(triggered()), this, SLOT(initPVEGame()));
     gameMenu->addAction(actionPVE);
 
